@@ -1,68 +1,70 @@
 import "./styles.css";
+
+let studentBackground = [
+  {
+    firstName: "Mikkail ",
+    lastName: "Allen ",
+    prononce: "He/His ",
+    school: "Williamsburg Charter High School ",
+    graduationYear: "2022 ",
+    favoriteColor: "Blue ",
+    socialMedia: "Tiktok ",
+    favoriteAnimal: "Dogs ",
+    nickName: "yes"
+  },
+  {
+    firstName: "Justin ",
+    lastName: "Apupalo ",
+    prononce: "He/His ",
+    school: "NYIT",
+    graduationYear: "2025 ",
+    favoriteColor: "Blue ",
+    socialMedia: "Insta ",
+    favoriteAnimal: "Rooster ",
+    nickName: "si"
+  },
+  {
+    firstName: "Christopher ",
+    lastName: "Bonifacio ",
+    prononce: "He/His ",
+    school: "OCA ",
+    graduationYear: "2022 ",
+    favoriteColor: "Blue ",
+    socialMedia: "Insta ",
+    favoriteAnimal: "Fish ",
+    nickName: "Chris"
+  },
+  {
+    firstName: "Angel ",
+    lastName: "Campoverde ",
+    prononce: "He/His ",
+    school: "Cristo Rey High School ",
+    graduationYear: "2022 ",
+    favoriteColor: "Purple ",
+    socialMedia: "Insta ",
+    favoriteAnimal: "Dogs ",
+    nickName: "N/A"
+  }
+];
 function studentRow(studentInfo) {
   return (
     <div className="classTable">
       <div className="header">
-        <span>{studentInfo[0]}</span>
-        <span>{studentInfo[1]}</span>
-        <snap>{studentInfo[2]}</snap>
-        <snap>{studentInfo[3]}</snap>
-        <snap>{studentInfo[4]}</snap>
-        <snap>{studentInfo[5]}</snap>
-        <snap>{studentInfo[6]}</snap>
-        <snap>{studentInfo[7]}</snap>
-        <snap>{studentInfo[8]}</snap>
+        <span>{studentInfo.firstName}</span>
+        <span>{studentInfo.lastName}</span>
+        <snap>{studentInfo.prononce}</snap>
+        <snap>{studentInfo.school}</snap>
+        <snap>{studentInfo.graduationYear}</snap>
+        <snap class="color">{studentInfo.favoriteColor}</snap>
+        <snap>{studentInfo.socialMedia}</snap>
+        <snap>{studentInfo.favoriteAnimal}</snap>
+        <snap>{studentInfo.nickName}</snap>
       </div>
     </div>
   );
 }
-let studentData = [
-  [
-    "Mikkail ",
-    "Allen ",
-    "He/His ",
-    "Williamsburg Charter High School ",
-    "2022 ",
-    "Blue ",
-    "Tiktok ",
-    "Dogs ",
-    "yes"
-  ],
-  [
-    "Justin ",
-    "Apupalo ",
-    "He/His ",
-    "NYIT ",
-    "2025 ",
-    "Blue ",
-    "Insta ",
-    "Rooster ",
-    "si"
-  ],
-  [
-    "Christopher ",
-    "Bonifacio ",
-    "He/His ",
-    "OCA ",
-    "2022 ",
-    "Blue ",
-    "Insta ",
-    "Fish ",
-    "Chris"
-  ],
-  [
-    "Angel ",
-    "Campoverde ",
-    "He/His ",
-    "Cristo Rey High School ",
-    "2022 ",
-    "Purple ",
-    "Insta ",
-    "Dogs "
-  ]
-];
 
 export default function App() {
-  let personRows = studentData.map(studentRow);
+  let personRows = studentBackground.map(studentRow);
   return <div> {personRows}</div>;
 }

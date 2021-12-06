@@ -2,3 +2,13 @@
   font-family: sans-serif;
   text-align: center;
 }
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.header {
+  background-color: beige;
+}
+.color {
+  color: red;
+}
